@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samarth Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Anton', sans-serif;
+      background: #1a0033;
+      color: #39ff14;
+      text-align: center;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 { font-size: 3rem; }
+    p { max-width: 600px; font-size: 1.2rem; }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      background: #39ff14;
+      color: #1a0033;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .gallery, .contact {
+      display: none;
+      padding: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #2a0055;
+      padding: 10px;
+      border-radius: 12px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .caption { margin-top: 8px; }
+
+  </style>
+</head>
+<body>
+
+<!-- HOME -->
+<div class="container" id="home">
+  <h1>Hello, I am Samarth Thakkar</h1>
+  <p>I design posters where aesthetics meets precision.</p>
+  <button class="btn" onclick="showWork()">My Work</button>
+</div>
+
+<!-- WORK -->
+<div class="gallery" id="work">
+  <h1>My Projects</h1>
+
+  <div class="grid">
+    <div class="card"><img src="poster1.png"><div class="caption">Project 1</div></div>
+    <div class="card"><img src="poster2.png"><div class="caption">Project 2</div></div>
+    <div class="card"><img src="poster3.png"><div class="caption">Project 3</div></div>
+    <div class="card"><img src="poster4.png"><div class="caption">Project 4</div></div>
+    <div class="card"><img src="poster5.png"><div class="caption">Project 5</div></div>
+    <div class="card"><img src="poster6.png"><div class="caption">Project 6</div></div>
+    <div class="card"><img src="poster7.png"><div class="caption">Project 7</div></div>
+    <div class="card"><img src="poster8.png"><div class="caption">Project 8</div></div>
+    <div class="card"><img src="poster9.png"><div class="caption">Project 9</div></div>
+    <div class="card"><img src="poster10.png"><div class="caption">Project 10</div></div>
+  </div>
+
+  <button class="btn" onclick="showContact()">Contact Me</button>
+</div>
+
+<!-- CONTACT -->
+<div class="contact" id="contact">
+  <h1>Contact Me</h1>
+  <p>📞 9978629658</p>
+  <p>📧 thakkarsamarth131@gmail.com</p>
+  <button class="btn" onclick="goHome()">Back to Home</button>
+</div>
+
+<script>
+function showWork() {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('work').style.display = 'block';
+}
+
+function showContact() {
+  document.getElementById('work').style.display = 'none';
+  document.getElementById('contact').style.display = 'block';
+}
+
+function goHome() {
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById('home').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>
